@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="kafaka.css">
+    
+    
+</head>
+<body>
+    <div class="cruds">
+        <div class="head">
+            <h2>GSF</h2>
+            <b>Golden State Foods</b>
+        </div>
+        <div class="input">
+            <input placeholder="title" type="text" id="title">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <input onkeyup="getTotal()" type="number" id="tax" placeholder="tax">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <small id="total"></small>
+            </div>
+            <input placeholder="count" type="number" id="count">
+            <input placeholder="Name Of Restaurant" type="text" id="Name Of Restaurant">
+            <button id="submit">create</button>
+        </div>
+        <div class="outbut">
+            <div class="search">
+                <input onkeyup="searchData(this.value)" id="search" type="text" placeholder="search">
+            </div>
+            <div class="BTNsearch">
+                <button onclick="getSearchMood(this.id)" id="searchtitle">search by title</button>
+                <button onclick="getSearchMood(this.id)" id="searchcategory">search by Name Of Restaurant</button> 
+            </div>
+            <div id="deleteAll">
+
+            </div>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>TITLE</th>
+                    <th>PRICE</th>
+                    <th>TAXES</th>
+                    <th>DISCOUNT</th>
+                    <th>TOTAL</th>
+                    <th>count</th>
+                    <th>Name Of Restaurant</th>
+                    <th>UPDATE</th>
+                    <th>DELETE</th>
+                </tr>
+                <tbody id="data"></tbody>
+            </table>
+            
+        </div>
+
+    </div>
+    <script src="GSF.js"></script>
+</body>
+</html>
